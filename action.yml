@@ -1,0 +1,29 @@
+name: Run toml-test
+description: Check your parser or writer with toml-test
+inputs:
+  command:
+    description: >-
+      Shell command to run your parser or writer
+    required: true
+  encoder:
+    description: >-
+      Enable encoder test mode
+    required: false
+  run:
+    description: >-
+      Glob-style filter for tests to include
+    required: false
+  skip:
+    description: >-
+      Glob-style filter for tests to exclude
+    required: false
+  test_dir:
+    description: >-
+      Directory of tests, overriding builtin tests
+    required: false
+runs:
+  using: node16
+  main: dist/index.js
+branding:
+  icon: 'file-text'
+  color: 'orange'
