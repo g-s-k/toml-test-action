@@ -26,7 +26,7 @@ async function run() {
     
     const args = [];
     
-    if (core.getBooleanInput('encoder', { required: false })) {
+    if (core.getInput('encoder', { required: false })) {
         args.push('-encoder');
     }
 

@@ -6627,7 +6627,7 @@ function run() {
             return tomlTestExtractedPath;
         }));
         const args = [];
-        if (core.getBooleanInput('encoder', { required: false })) {
+        if (core.getInput('encoder', { required: false })) {
             args.push('-encoder');
         }
         const run_arg = core.getInput('run', { required: false });
