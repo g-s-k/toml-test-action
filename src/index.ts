@@ -46,7 +46,7 @@ async function run() {
     }
 
     const command_arg = core.getInput('command', { required: true });
-    args.push('-v', '-v', '-color', 'never', '--', command_arg);
+    args.push('-v', '-v', '--', ...command_arg.split(' '));
 
     await exec.exec(`"${tomlTestPath}"`, args);
 }

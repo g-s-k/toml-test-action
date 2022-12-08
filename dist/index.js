@@ -6643,7 +6643,7 @@ function run() {
             args.push('-testdir', test_dir_arg);
         }
         const command_arg = core.getInput('command', { required: true });
-        args.push('-v', '-v', '-color', 'never', '--', command_arg);
+        args.push('-v', '-v', '--', ...command_arg.split(' '));
         yield exec.exec(`"${tomlTestPath}"`, args);
     });
 }
