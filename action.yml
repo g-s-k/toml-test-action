@@ -17,6 +17,14 @@ inputs:
     description: >-
       Glob-style filter for tests to exclude
     required: false
+  parallel:
+    description: >-
+      Number of test cases to run in parallel
+    required: false
+  timeout:
+    description: >-
+      Timeout for each test case
+    required: false
   test_dir:
     description: >-
       Directory of tests, overriding builtin tests

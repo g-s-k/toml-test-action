@@ -40,6 +40,16 @@ async function run() {
         args.push('-skip', skip_arg);
     }
 
+    const parallel_arg = core.getInput('parallel', { required: false });
+    if (parallel_arg) {
+        args.push('-parallel', parallel);
+    }
+
+    const timeout_arg = core.getInput('timeout', { required: false });
+    if (timeout_arg) {
+        args.push('-timeout', timeout);
+    }
+
     const test_dir_arg = core.getInput('test_dir', { required: false });
     if (test_dir_arg) {
         args.push('-testdir', test_dir_arg);

@@ -22,6 +22,16 @@ A glob pattern to specify which tests to run. Defaults to all.
 
 A glob pattern to specify which tests to skip. Defaults to none.
 
+### `parallel`
+
+Number of tests to run in parallel. Defaults to picking number automatically
+based on system characteristics.
+
+### `timeout`
+
+A duration, written as a string (e.g. '2s') for each individual test case.
+Defaults to 1 second.
+
 ### `test_dir`
 
 A directory path where your custom test cases are located. See the toml-test
